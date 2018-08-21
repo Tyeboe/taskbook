@@ -60,6 +60,10 @@ const taskbookCLI = (input, flags) => {
     return taskbook.cleanBoards(input);
   }
 
+  if(flags.rename) {
+    return taskbook.renameBoard(input);
+  }
+
   taskbook.displayByBoard();
   return taskbook.displayStats();
 };
