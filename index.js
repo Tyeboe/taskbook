@@ -61,6 +61,13 @@ const taskbookCLI = (input, flags) => {
   if (flags.move) {
     return taskbook.moveBoards(input);
   }
+  if(flags.clean){
+    return taskbook.cleanBoards(input);
+  }
+
+  if(flags.rename) {
+    return taskbook.renameBoard(input);
+  }
 
 
   taskbook.displayByBoard();

@@ -37,7 +37,24 @@
     "default": {
       "taskbookDirectory": "",
       "displayCompleteTasks": true,
-      "displayProgressOverview": true
+      "displayProgressOverview": true,
+      "starredItemSymbol": "★",
+      "priorities": {
+        "2": "yellow",
+        "3": "red"
+      },
+      "signaleOptions": {
+        "types": {
+          "error": {
+          },
+          "success": {
+          },
+          "note":{
+          },
+          "pending": {
+          }
+        }	
+      }
     }
   },
   "scripts": {
