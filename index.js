@@ -64,6 +64,14 @@ const taskbookCLI = (input, flags) => {
     return taskbook.renameBoard(input);
   }
 
+  if(flags.before) {
+    return taskbook.displayItemsBefore(input);
+  }
+
+  if(flags.after) {
+    return taskbook.displayItemsAfter(input);
+  }
+
   taskbook.displayByBoard();
   return taskbook.displayStats();
 };
