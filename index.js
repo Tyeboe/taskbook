@@ -3,6 +3,11 @@
 const taskbook = require('./lib/taskbook');
 
 const taskbookCLI = (input, flags) => {
+  
+  if (flags.category) {
+    return taskbook.categorize(input);
+  }
+
   if (flags.archive) {
     return taskbook.displayArchive();
   }
@@ -56,6 +61,7 @@ const taskbookCLI = (input, flags) => {
   if (flags.move) {
     return taskbook.moveBoards(input);
   }
+
 
   taskbook.displayByBoard();
   return taskbook.displayStats();

@@ -67,6 +67,10 @@ const cli = meow(help, {
     move: {
       type: 'boolean',
       alias: 'm'
+    },
+    category: {
+      type: 'boolean',
+      alias: 'ca'
     }
   }
 });
