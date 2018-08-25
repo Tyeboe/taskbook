@@ -4,7 +4,7 @@ const meow = require('meow');
 const updateNotifier = require('update-notifier');
 const help = require('./lib/help');
 const pkg = require('./package.json');
-const taskbook = require('.');
+const taskbook = require('./index');
 
 const cli = meow(help, {
   flags: {
@@ -83,6 +83,14 @@ const cli = meow(help, {
     after: {
       type: 'boolean',
       alias: 'w'
+    },
+    export: {
+      type: 'boolean',
+      alias: 'q'
+    },
+    import: {
+      type: 'boolean',
+      alias: 'o'
     }
 
   }
