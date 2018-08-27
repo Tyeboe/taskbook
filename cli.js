@@ -86,7 +86,7 @@ const cli = meow(help, {
     },
     category: {
       type: 'boolean',
-      alias: 'ca'
+      alias: 'b'
     }
 
   }
