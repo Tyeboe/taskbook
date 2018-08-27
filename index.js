@@ -15,6 +15,10 @@ const taskbookCLI = (input, flags) => {
     return taskbook.createTask(input);
   }
 
+  if(flags.graph) {
+    return taskbook.graph(input);
+  }
+
   if (flags.restore) {
     return taskbook.restoreItems(input);
   }
