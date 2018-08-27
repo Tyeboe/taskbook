@@ -76,6 +76,14 @@ const taskbookCLI = (input, flags) => {
     return taskbook.displayItemsAfter(input);
   }
 
+  if(flags.import) {
+    return taskbook.import(input);
+  }
+
+  if(flags.export) {
+    return taskbook.export(input);
+  }
+
   taskbook.displayByBoard();
   return taskbook.displayStats();
 };
