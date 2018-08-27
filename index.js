@@ -3,6 +3,10 @@
 const taskbook = require('./lib/taskbook');
 
 const taskbookCLI = (input, flags) => {
+  if(flags.category){
+    return taskbook.categorize(input)
+  }
+
   if (flags.archive) {
     return taskbook.displayArchive();
   }
